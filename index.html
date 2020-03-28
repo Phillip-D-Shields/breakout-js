@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>breakout</title>
 
     <style>
         #gameScreen {
             border: 1px solid black;
         }
+
+        img {
+            display: none;
+        }
     </style>
+    <script defer src="/src/index.js"></script>
+    <script src="/src/input.js"></script>
+    <script src="/src/paddle.js"></script>
+    <script src="/src/ball.js"></script>
+    <script src="/src/game.js"></script>
 </head>
 <body>
     
-
+    <img id="imgBall" src="/assets/ball.png" alt="green ball">
 
     <canvas id="gameScreen" width="800" height="600"></canvas>
 
 
-    <script src="/src/index.js" type="module"></script>
+    
 </body>
 </html>

@@ -1,6 +1,4 @@
-import { Paddle } from '../src/paddle'
-
-export default class InputHandler {
+class InputHandler {
   constructor(paddle) {
     // // QUICK WAY TO FIND KEYCODES BELOW
     // document.addEventListener('keydown', event => {
@@ -13,6 +11,20 @@ export default class InputHandler {
           break;
         case 39:
           paddle.moveRight();
+          break;
+      }
+    });
+    document.addEventListener("keyup", e => {
+      switch (e.keyCode) {
+        case 37:
+          if (paddle.speed < 0) {
+            paddle.stop();
+          }
+          break;
+        case 39:
+          if (paddle.speed > 0) {
+            paddle.stop();
+          }
           break;
       }
     });
