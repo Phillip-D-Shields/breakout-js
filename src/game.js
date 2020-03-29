@@ -8,16 +8,22 @@ class Game {
     this.paddle = new Paddle(this);
     this.ball = new Ball(this);
 
+    let brick = new Brick(this, {x: 20, y: 20});
+
+    this.gameObjects = [
+      this.ball,
+      this.paddle,
+      brick
+    ];
+
     new InputHandler(this.paddle);
   }
 
-  update(deltaTime) {
-    this.paddle.update(deltaTime);
-    this.ball.update(deltaTime);
+  update(deltaTime) { 
+    this.gameObjects.forEach(object => object.update(deltaTime));
   }
 
   draw(ctx) {
-    this.paddle.draw(ctx);
-    this.ball.draw(ctx);
+    this.gameObjects.forEach(object => object.draw(ctx));
   }
 }
