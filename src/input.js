@@ -1,5 +1,5 @@
 class InputHandler {
-  constructor(paddle) {
+  constructor(paddle, game) {
     // // QUICK WAY TO FIND KEYCODES BELOW
     // document.addEventListener('keydown', event => {
     //     console.log(event.keyCode);
@@ -25,6 +25,12 @@ class InputHandler {
           if (paddle.speed > 0) {
             paddle.stop();
           }
+          break;
+        case 27:
+          game.togglePause();
+          break;
+        case 32: 
+          game.start();
           break;
       }
     });
