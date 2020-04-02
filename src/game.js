@@ -33,6 +33,7 @@ class Game {
     this.gameObjects = [this.ball, this.paddle];
 
     this.gamestate = GAMESTATE.RUNNING;
+    livesDisplay.textContent = game.lives;
   }
 
   update(deltaTime) {

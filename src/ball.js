@@ -44,6 +44,7 @@ class Ball {
     // bottom of screen
     if (this.position.y + this.size > this.gameHeight) {
       this.game.lives--;
+      livesDisplay.textContent = game.lives;
       this.reset();
     }
 

@@ -1,18 +1,39 @@
 <!DOCTYPE html5>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>breakout</title>
 
     <style>
-        #gameScreen {
-            border: 1px solid black;
-        }
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
 
-        img {
-            display: none;
-        }
+      main {
+        height: 100%;
+        width: 100%;
+        background-image: url("/assets/rainbow-dash-bg.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #gameScreen {
+        border: 1px solid black;
+        background-color: rgba(red, green, blue, 0.3);
+      }
+
+      img {
+        display: none;
+      }
     </style>
     <script defer src="/src/index.js"></script>
     <script src="/src/input.js"></script>
@@ -22,15 +43,14 @@
     <script src="/src/brick.js"></script>
     <script src="/src/levels.js"></script>
     <script src="/src/collisionDetect.js"></script>
-</head>
-<body>
-    
-    <img id="imgBall" src="/assets/ball.png" alt="green ball">
-    <img id="imgBrick" src="/assets/brick.png" alt="red brick">
+  </head>
+  <body>
+    <main>
+      <img id="imgBall" src="/assets/ball.png" alt="green ball" />
+      <img id="imgBrick" src="/assets/brick.png" alt="red brick" />
 
-    <canvas id="gameScreen" width="800" height="600"></canvas>
-
-
-    
-</body>
+      <canvas id="gameScreen" width="800" height="600"></canvas>
+      <h2>lives: <span id="livesDisplay"></span></h2>
+    </main>
+  </body>
 </html>
