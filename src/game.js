@@ -69,11 +69,11 @@ class Game {
       ctx.fillStyle = "rgba(0,0,0,1)";
       ctx.fill();
 
-      ctx.font = "45px Monospace";
+      ctx.font = "24px Monospace";
       ctx.fillStyle = "white";
       ctx.textAlign = "center";
       ctx.fillText(
-        "Press SPACEBAR to start",
+        "Spacebar to start, arrow keys to move, esc to pause",
         this.gameWidth / 2,
         this.gameHeight / 2
       );

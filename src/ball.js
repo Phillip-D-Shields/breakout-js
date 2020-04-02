@@ -7,14 +7,14 @@ class Ball {
 
     this.game = game;
 
-    this.size = 16;
+    this.size = 24;
     this.reset();
   }
 
   reset() {
     // starting position and speed
-    this.position = { x: 10, y: 400 };
-    this.speed = { x: 4, y: -2 };
+    this.position = { x: 10, y: 300 };
+    this.speed = { x: 2, y: -4 };
   }
 
   draw(ctx) {

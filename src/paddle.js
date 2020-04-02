@@ -25,7 +25,7 @@ class Paddle {
   }
 
   draw(ctx) {
-    ctx.fillStyle = "#0f0";
+    ctx.fillStyle = "#d4223a";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 
